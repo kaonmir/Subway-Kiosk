@@ -1,5 +1,6 @@
 package com.example.fuckingviewpagedamn
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -21,6 +22,11 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = adapter
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+        super.onActivityResult(requestCode, resultCode, data)
+        return
+    }
     class MyViewPagerAdapter(manager: FragmentManager): FragmentPagerAdapter(manager) {
         private val fragmentList : MutableList<Fragment> = ArrayList()
         private val titleList : MutableList<String> = ArrayList()

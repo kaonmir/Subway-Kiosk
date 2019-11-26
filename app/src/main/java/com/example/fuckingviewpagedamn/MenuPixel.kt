@@ -1,6 +1,9 @@
 package com.example.fuckingviewpagedamn
 
 import android.content.Context
+import android.content.Intent
+import android.os.Parcel
+import android.os.Parcelable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +12,8 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.menupixel.view.*
 
 class MenuPixel : LinearLayout, View.OnClickListener {
-    private var price: Int = 0
+
+    private val menu: Menu = Menu()
 
     constructor(imageId: Int, text: String, price: Int, context: Context, attrs: AttributeSet, defStyle: Int): super(context,attrs)
     {
@@ -21,13 +25,16 @@ class MenuPixel : LinearLayout, View.OnClickListener {
         LayoutInflater.from(context).inflate(R.layout.menupixel, this, true)
         imageView.setImageResource(imageId)
         textView.text = text
-        this.price = price
-
+        menu.name = text
+        menu.price = price
         imageView.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
-        Toast.makeText(context, "You order ${textView.text} Sandwich\nIt's $price won", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "You order ${textView.text} Sandwich\nIt's ${menu.price} won", Toast.LENGTH_SHORT).show()
+        val intent = Intent(context, OptionSelectActivity::class.java)
+        intent.putExtra("menu", menu)
+        context.startActivity(intent)
     }
 
 }
