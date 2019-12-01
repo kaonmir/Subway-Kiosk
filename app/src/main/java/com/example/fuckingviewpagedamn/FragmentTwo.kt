@@ -24,13 +24,12 @@ class FragmentTwo : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        frameLayout1.addView(MenuPixel(R.drawable.steakcheese_sandwiches, "Steak & Cheese", 10000, view.context))
-        frameLayout2.addView(MenuPixel(R.drawable.sweetonionchickenteriyaki_sandwiches, "Black Forest", 11000, view.context))
-        frameLayout3.addView(MenuPixel(R.drawable.subclub, "Subway Club", 12000, view.context))
-        frameLayout4.addView(MenuPixel(R.drawable.turkeybreast, "Turkey Breast ", 13000, view.context))
-        frameLayout5.addView(MenuPixel(R.drawable.ultimate_spicy_italian, "Black Forest", 14000, view.context))
-        frameLayout6.addView(MenuPixel(R.drawable.ultimate_meatball_marinara, "Black Forest", 15000, view.context))
-        frameLayout7.addView(MenuPixel(R.drawable.veggiedelite_sandwiches, "Black Forest", 16000, view.context))
+        frameLayout1.addView(MenuPixel("steakcheese_sandwiches.jpg", "Steak & Cheese", 10000, view.context))
+        frameLayout2.addView(MenuPixel("turkeybreast.jpg", "Turkey Breast", 11000, view.context))
+        frameLayout3.addView(MenuPixel("subclub.jpg", "Subway Club", 12000, view.context))
+        frameLayout4.addView(MenuPixel("ultimate_meatball_marinara.jpg", "Turkey Breast ", 13000, view.context))
+        frameLayout5.addView(MenuPixel("ultimate_spicy_italian.jpg", "Spicy Italian", 14000, view.context))
+        frameLayout6.addView(MenuPixel("veggiedelite_sandwiches.jpg", "Veggie Delite", 15000, view.context))
     }
 
 }

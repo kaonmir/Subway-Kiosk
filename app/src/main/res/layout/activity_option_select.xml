@@ -8,255 +8,398 @@
     android:paddingBottom="20dp"
     tools:context=".OptionSelectActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:paddingTop="10dp"
-        android:paddingBottom="20dp">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp">
 
-            <TextView
-                android:id="@+id/textView_BreadLength"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bread Length"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <HorizontalScrollView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_BreadLength">
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/textView_BreadLength"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
+                    android:text="Bread Length"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/imgView_bread_short"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:padding="20dp"
-                        app:srcCompat="@drawable/baguette_short" />
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_BreadLength">
 
-                    <ImageView
-                        android:id="@+id/imgView_bread_long"
-                        android:layout_width="100dp"
-                        android:layout_height="100sp"
-                        app:srcCompat="@drawable/baguette_long" />
-                </LinearLayout>
-            </HorizontalScrollView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1">
+                        <ImageView
+                            android:id="@+id/imgView_bread_short"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="20dp"/>
 
-            <TextView
-                android:id="@+id/textView_BreadType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bread Type"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                        <ImageView
+                            android:id="@+id/imgView_bread_long"
+                            android:layout_width="100dp"
+                            android:layout_height="100sp"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <HorizontalScrollView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_BreadType">
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/textView_BreadType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingBottom="20dp">
+                    android:text="Bread Type"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp">
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_BreadType">
 
-                        <ImageView
-                            android:id="@+id/imgView_flat_top"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            app:layout_constraintBottom_toTopOf="@+id/imgView_flat_bottom"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/bread_flat_top" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="20dp">
 
-                        <ImageView
-                            android:id="@+id/imgView_flat_bottom"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:srcCompat="@drawable/bread_flat_bottom" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp">
+                            <ImageView
+                                android:id="@+id/imgView_flat_top"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/imgView_flat_bottom"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
 
-                        <ImageView
-                            android:id="@+id/imgView_italian_top"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            app:layout_constraintBottom_toTopOf="@+id/imgView_italian_bottom"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/bread_italian_top" />
+                            <ImageView
+                                android:id="@+id/imgView_flat_bottom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <ImageView
-                            android:id="@+id/imgView_italian_bottom"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:srcCompat="@drawable/bread_italian_bottom" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp">
+                            <ImageView
+                                android:id="@+id/imgView_italian_top"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/imgView_italian_bottom"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
 
-                        <ImageView
-                            android:id="@+id/imgView_italianherb_top"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            app:layout_constraintBottom_toTopOf="@+id/imgView_italianherb_bottom"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/bread_italianherb_top" />
+                            <ImageView
+                                android:id="@+id/imgView_italian_bottom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <ImageView
-                            android:id="@+id/imgView_italianherb_bottom"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:srcCompat="@drawable/bread_italianherb_bottom" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp">
+                            <ImageView
+                                android:id="@+id/imgView_italianherb_top"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/imgView_italianherb_bottom"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
 
-                        <ImageView
-                            android:id="@+id/imgView_wheat_top"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            app:layout_constraintBottom_toTopOf="@+id/imgView_wheat_bottom"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/bread_wheat_top" />
+                            <ImageView
+                                android:id="@+id/imgView_italianherb_bottom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <ImageView
-                            android:id="@+id/imgView_wheat_bottom"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:srcCompat="@drawable/bread_wheat_bottom" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </LinearLayout>
-            </HorizontalScrollView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/imgView_wheat_top"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/imgView_wheat_bottom"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
 
-            <TextView
-                android:id="@+id/TextView_CheeseType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cheese"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                            <ImageView
+                                android:id="@+id/imgView_wheat_bottom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <HorizontalScrollView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TextView_CheeseType">
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/textView_CheeseType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
+                    android:text="Cheese"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/imgView_cheese_white"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        app:srcCompat="@drawable/cheese_white" />
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_CheeseType">
 
-                    <ImageView
-                        android:id="@+id/imgeView_cheese_mozza"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/cheese_mozza" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/imgView_cheese_shredded"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/cheeese_shredded" />
-                </LinearLayout>
-            </HorizontalScrollView>
+                        <ImageView
+                            android:id="@+id/imgView_cheese_white"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/imgeView_cheese_mozza"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"/>
 
-    </LinearLayout>
+                        <ImageView
+                            android:id="@+id/imgView_cheese_shredded"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView_Vegetables"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vegetables"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_Vegetables">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imgView_tomato"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:id="@+id/imgView_redonion"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/imgView_pickle"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/imgView_pepper"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/imgView_olive"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/imgView_lettuce"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:id="@+id/imgView_jelapeno"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp" />
+
+                        <ImageView
+                            android:id="@+id/imgView_cucumber"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView_Sources"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sources"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_Sources">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imgView_bbq"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/imgView_caesear"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/imgView_mayonnaise"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/imgView_mustard"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/imgView_oil"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/imgView_ranch"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:id="@+id/imgView_southwest"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp" />
+
+                        <ImageView
+                            android:id="@+id/imgView_sweetonion"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/btn_done"
