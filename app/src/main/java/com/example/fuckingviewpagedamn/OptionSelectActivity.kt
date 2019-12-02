@@ -19,8 +19,8 @@ class OptionSelectActivity : AppCompatActivity() {
         setImage(imgView_bread_short, MyUrl("baguette_short.png", "option"))
         setImage(imgView_bread_long, MyUrl("baguette_long.png", "option"))
         //bread type
-        setImage(imgView_wheat_top, MyUrl("bread_flat_top.png", "option"))
-        setImage(imgView_wheat_bottom, MyUrl("bread_flat_bottom.png", "option"))
+        setImage(imgView_wheat_top, MyUrl("bread_wheat_top.png", "option"))
+        setImage(imgView_wheat_bottom, MyUrl("bread_wheat_bottom.png", "option"))
         setImage(imgView_italianherb_top, MyUrl("bread_italianherb_top.png", "option"))
         setImage(imgView_italianherb_bottom, MyUrl("bread_italianherb_bottom.png", "option"))
         setImage(imgView_flat_top, MyUrl("bread_flat_top.png", "option"))
@@ -90,8 +90,8 @@ class OptionSelectActivity : AppCompatActivity() {
                 |Sources: ${sourceList.joinToString{"${SourceType.values()[it]}"}}
                 """.trimMargin(), Toast.LENGTH_SHORT).show()
 
-            menu.vegetables= vegetableList
-            menu.sources = sourceList
+            menu.vegetables= vegetableList.joinToString(",") {"${VegetableType.values()[it]}" }
+            menu.sources = sourceList.joinToString(",") {"${SourceType.values()[it]}" }
 
 
             val intent = Intent()

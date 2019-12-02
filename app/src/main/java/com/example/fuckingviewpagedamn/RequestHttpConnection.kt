@@ -46,7 +46,7 @@ class RequestHttpURLConnection {
                     if (_params.size() >= 2)
                         isAnd = true
             }
-        }// 보낼 데이터가 있으면 파라미터를 채운다.
+        } // 보낼 데이터가 있으면 파라미터를 채운다.
 
         /**
          * 2. HttpURLConnection을 통해 web의 데이터를 가져온다.

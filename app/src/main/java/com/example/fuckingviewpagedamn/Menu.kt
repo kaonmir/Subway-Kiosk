@@ -11,8 +11,8 @@ class Menu() : Parcelable {
     var breadLength: BreadLength = BreadLength.NONE
     var breadType: BreadType = BreadType.NONE
     var cheese: CheeseType = CheeseType.NONE
-    var vegetables = listOf<Int>()
-    var sources = listOf<Int>()
+    var vegetables: String = ""
+    var sources: String = ""
 
     constructor(parcel: Parcel) : this() {
         name = parcel.readString()!!
@@ -21,8 +21,8 @@ class Menu() : Parcelable {
         breadType = BreadType.values()[parcel.readInt()]
         cheese = CheeseType.values()[parcel.readInt()]
 
-        parcel.readList(vegetables, Int.javaClass.classLoader)
-        parcel.readList(sources, Int.javaClass.classLoader)
+        vegetables = parcel.readString()!!
+        sources = parcel.readString()!!
     }
 
     override fun writeToParcel(dest: Parcel?, flags: Int) {
@@ -32,22 +32,21 @@ class Menu() : Parcelable {
             writeInt(breadLength.ordinal)
             writeInt(breadType.ordinal)
             writeInt(cheese.ordinal)
-            writeList(vegetables)
-            writeList(sources)
+            writeString(vegetables)
+            writeString(sources)
         }
     }
 
     fun toJson(): String {
-        val jsonstr = """{
+        return """{
             |   "name": "$name",
             |   "breadLength": "$breadLength",
             |   "breadType": "$breadType",
             |   "cheese": "$cheese",
-            |   "vegetables": [${vegetables.map {SourceType.values()[it]}.joinToString { ","}}]
-            |   "sources": [${sources.map {"${SourceType.values()[it]}"}.joinToString { ","}}]
+            |   "vegetables": [$vegetables]
+            |   "sources": [$sources]
             |}
         """.trimMargin()
-        return jsonstr
     }
 
     override fun describeContents(): Int {
