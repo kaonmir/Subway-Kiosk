@@ -7,7 +7,7 @@ enum class BreadType {
     WHEAT, ITALIANHERB, FLATBREAD, ITALIAN, NONE
 }
 enum class CheeseType {
-    SHREDDED, WHITE, MOZZARELLA, NONE
+    SHREDDED, WHITE, MOZZARELLA, PROVOLONE, NONE
 }
 enum class VegetableType() {
     PICKLE, CUCUMBER, JALAPENO,

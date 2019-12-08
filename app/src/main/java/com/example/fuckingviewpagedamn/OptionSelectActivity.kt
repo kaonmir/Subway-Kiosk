@@ -16,9 +16,9 @@ class OptionSelectActivity : AppCompatActivity() {
     private var sourceList = mutableListOf<Int>()
     private fun init() {
         // bread Length
-        setImage(imgView_bread_short, MyUrl("baguette_short.png", "option"))
-        setImage(imgView_bread_long, MyUrl("baguette_long.png", "option"))
-        //bread type
+        setImage(imgView_bread_short, MyUrl("breadlength_short.png", "option"))
+        setImage(imgView_bread_long, MyUrl("breadlength_long.png", "option"))
+        //        //bread type
         setImage(imgView_wheat_top, MyUrl("bread_wheat_top.png", "option"))
         setImage(imgView_wheat_bottom, MyUrl("bread_wheat_bottom.png", "option"))
         setImage(imgView_italianherb_top, MyUrl("bread_italianherb_top.png", "option"))
@@ -28,7 +28,7 @@ class OptionSelectActivity : AppCompatActivity() {
         setImage(imgView_italian_top, MyUrl("bread_italian_top.png", "option"))
         setImage(imgView_italian_bottom, MyUrl("bread_italian_bottom.png", "option"))
         //cheese
-        setImage(imgView_cheese_shredded, MyUrl("cheeese_shredded.png", "option"))
+        setImage(imgView_cheese_shredded, MyUrl("cheese_shredded.png", "option"))
         setImage(imgView_cheese_white, MyUrl("cheese_white.png", "option"))
         setImage(imgeView_cheese_mozza, MyUrl("cheese_mozza.png", "option"))
         //vegetables
@@ -82,17 +82,9 @@ class OptionSelectActivity : AppCompatActivity() {
         onClickedMenuList(sourceImgList, "Source", 3)
 
         btn_done.setOnClickListener {
-            Toast.makeText(this, """
-                |Bread Length: ${menu.breadLength}
-                |Bread Type: ${menu.breadType}
-                |Cheese: ${menu.cheese}
-                |Vegetables: ${vegetableList.joinToString{"${VegetableType.values()[it]}"}}
-                |Sources: ${sourceList.joinToString{"${SourceType.values()[it]}"}}
-                """.trimMargin(), Toast.LENGTH_SHORT).show()
 
             menu.vegetables= vegetableList.joinToString(",") {"${VegetableType.values()[it]}" }
-            menu.sources = sourceList.joinToString(",") {"${SourceType.values()[it]}" }
-
+            menu.sources = sourceList.joinToString(",") {"${SourceType.values()[it]}"}
 
             val intent = Intent()
             intent.putExtra("menu", menu)
@@ -100,7 +92,6 @@ class OptionSelectActivity : AppCompatActivity() {
             println(intent.hasExtra("menu"))
             finish()
         }
-
     }
     private fun onClickedOneMenuList(imgList: List<ImageView>, string: String) {
         for((index, imageView) in imgList.withIndex()) {

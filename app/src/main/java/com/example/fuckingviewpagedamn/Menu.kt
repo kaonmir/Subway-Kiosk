@@ -43,8 +43,8 @@ class Menu() : Parcelable {
             |   "breadLength": "$breadLength",
             |   "breadType": "$breadType",
             |   "cheese": "$cheese",
-            |   "vegetables": [$vegetables]
-            |   "sources": [$sources]
+            |   "vegetables": "$vegetables",
+            |   "sources": "$sources"
             |}
         """.trimMargin()
     }
